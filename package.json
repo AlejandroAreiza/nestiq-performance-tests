@@ -1,0 +1,31 @@
+{
+  "name": "nestiq-performance-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:load": "esbuild src/scenarios/device-registry/load-test.ts --bundle --outfile=dist/load-test.js --platform=neutral --external:k6 --external:k6/*",
+    "build:stress": "esbuild src/scenarios/device-registry/stress-test.ts --bundle --outfile=dist/stress-test.js --platform=neutral --external:k6 --external:k6/*",
+    "build:spike": "esbuild src/scenarios/device-registry/spike-test.ts --bundle --outfile=dist/spike-test.js --platform=neutral --external:k6 --external:k6/*",
+    "load-test": "npm run build:load && k6 run dist/load-test.js",
+    "stress-test": "npm run build:stress && k6 run dist/stress-test.js",
+    "spike-test": "npm run build:spike && k6 run dist/spike-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejandroAreiza/nestiq-performance-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AlejandroAreiza/nestiq-performance-tests/issues"
+  },
+  "homepage": "https://github.com/AlejandroAreiza/nestiq-performance-tests#readme",
+  "devDependencies": {
+    "@types/k6": "^1.6.0",
+    "esbuild": "^0.27.3",
+    "typescript": "^5.9.3"
+  }
+}
