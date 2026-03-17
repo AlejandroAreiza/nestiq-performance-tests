@@ -8,7 +8,7 @@ Performance tests for the NestIQ smart home IoT platform using [k6](https://k6.i
 
 - [k6](https://k6.io/docs/getting-started/installation/) installed
 - [Node.js](https://nodejs.org/) v18+
-- Target service running (local or staging)
+- Target service running locally
 
 ---
 
@@ -40,11 +40,6 @@ npm install
 npm run load-test    # normal load
 npm run stress-test  # push to limits
 npm run spike-test   # sudden burst
-```
-
-**Against staging:**
-```bash
-ENVIRONMENT=staging npm run load-test
 ```
 
 ---
@@ -151,7 +146,6 @@ VUs
 | Environment | Base URL |
 |---|---|
 | `local` | `http://localhost:5283` |
-| `staging` | `https://staging.nestiq.com` |
 
 ---
 
