@@ -14,6 +14,21 @@ Performance tests for the NestIQ smart home IoT platform using [k6](https://k6.i
 
 ## ⚙️ Setup
 
+### 1. Start the target service
+
+Clone and run the device-registry service locally:
+
+```bash
+git clone https://github.com/AlejandroAreiza/nestiq-device-registry.git
+cd nestiq-device-registry
+npm install
+npm run start:dev
+```
+
+The service will run at `http://localhost:5283`.
+
+### 2. Install dependencies
+
 ```bash
 npm install
 ```
