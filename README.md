@@ -21,8 +21,7 @@ Clone and run the device-registry service locally:
 ```bash
 git clone https://github.com/AlejandroAreiza/nestiq-device-registry.git
 cd nestiq-device-registry
-npm install
-npm run start:dev
+dotnet run --project src/NestIQ.DeviceRegistry.Api
 ```
 
 The service will run at `http://localhost:5283`.
